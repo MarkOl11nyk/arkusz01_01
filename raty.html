@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
@@ -10,42 +10,42 @@
         <img src="baner.png" alt="kursy komputerowe">
     </header>
 
-        <nav>
-            <a href="index.html" class="menu">Strona główna</a>
-            <a href="raty.html" class="menu">Koszt rat</a>
-            <a href="https://moje-szkolenia.pl/" class="menu">Nasz partner</a>
-        </nav>
+    <nav>
+        <a href="index.html" class="menu">Strona główna</a>
+        <a href="raty.html" class="menu">Koszt rat</a>
+        <a href="https://moje-szkolenia.pl/" class="menu">Nasz partner</a>
+    </nav>
 
     <main>
         <h3>Oblicz miesięczną ratę</h3>
-    <label><input type="checkbox" name="kurs_react" class="kontrolki">Kurs React.js</label>
-    <br>
-    <label><input type="checkbox" name="kurs_java" class="kontrolki">Kurs JavaScript</label>
-    <br>
-    <label>Liczba rat: </label>
-    <input type="number" name="number" id="number" class="kontrolki">
-    <br><br>
-    <section class="kontrolki">
-        <select>
-        <option>Katowice</option>
-        <option>Warszawa</option>
-        <option>Gdansk</option>
-    </select>
-    </section>
-    <br>
-    <input type="submit"  value="Przycisk" class="kontrolki">
-    <p id="paragraf"></p>
-
+        <label><input type="checkbox" id="react" class="kontrolki">Kurs React.js</label>
+        <br>
+        <label><input type="checkbox" id="js" class="kontrolki">Kurs JavaScript</label>
+        <br>
+        <label>Liczba rat: </label>
+        <input type="number" id="number" class="kontrolki">
+        <br><br>
+        <section class="kontrolki">
+            <select id="miasto">
+                <option>Katowice</option>
+                <option>Warszawa</option>
+                <option>Gdansk</option>
+            </select>
+        </section>
+        <br>
+        <input type="button" id="przycisk" value="Oblicz ratę" class="kontrolki">
+        <p id="wynik"></p>
     </main>
 
-        <footer>
-            <p>Autor strony:000000000</p>
-        </footer>
+    <footer>
+        <p>Autor strony: 000000000</p>
+    </footer>
+
     <script>
-    function obliczRate() {
+        function obliczRate() {
             var zaznaczonyReact = document.getElementById('react').checked;
             var zaznaczonyJS = document.getElementById('js').checked;
-            var liczbaRat = parseInt(document.getElementById('raty').value);
+            var liczbaRat = parseInt(document.getElementById('number').value);
             var miasto = document.getElementById('miasto').value;
 
             var cenaReact = 5000;
@@ -66,14 +66,14 @@
 
             var rata = Math.round((suma / liczbaRat) * 100) / 100;
 
-            document.getElementById('wynik').innerHTML ="Kurs odbędzie się w " + miasto + ".<br>" +
-                "Koszt całkowity: " + suma + " zł.<br>" +
-                "Płacisz " + liczbaRat + " rat po " + rata + " zł.";
+            document.getElementById('wynik').innerHTML = "Kurs odbędzie się w " + miasto + ". Koszt całkowity: " + suma + " zł. Płacisz " + liczbaRat + " rat po " + rata + " zł.";
         }
 
         window.onload = function () {
             document.getElementById('przycisk').onclick = obliczRate;
         }
-</script>
+    </script>
 </body>
 </html>
+
+
