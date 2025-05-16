@@ -1,0 +1,52 @@
+body 
+{
+    font-family: Helvetica;
+    background-color: #EAEAEA;
+    color: black;
+}
+nav, footer
+{
+    background-color: #625B5B;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+header img
+{
+    width: 100%;
+    height: auto;
+}
+ul
+{
+    margin-left: 40px;
+    list-style-type: circle;
+}
+nav a
+{
+    font-weight: bold;
+    color: #625B5B;
+    background-color: #EAEAEA;
+    padding: 10px;
+    margin: 50px;
+    border-radius: 20px;
+}
+nav a:hover 
+{
+    background-color: #625B5B;
+    color: #EAEAEA;
+    border: 1px solid #EAEAEA;
+}
+table
+{
+    border: 1px dashed #625B5B;
+    width: 60%;
+    margin-left: 40px;
+    text-align: center;
+}
+#kontrolki
+{
+    margin: 5px;
+}
+.kontrolki {
+    margin: 5px;
+}
